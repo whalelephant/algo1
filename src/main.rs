@@ -5,7 +5,7 @@ mod week4;
 use week1::karatsuba;
 use week2::{inversion_input, inversion};
 use week3::{quicksort_input, quicksort};
-use week4::{contraction_input, contraction};
+use week4::{contraction, contraction_input};
 
 fn main() {
     // week1
@@ -29,7 +29,7 @@ fn main() {
     // week4
     let mut mincuts = Vec::new();
     let mut min = 99999;
-    for i in 0..500 {
+    for _i in 0..500 {
         let mut input = contraction_input();
         let mut mc = [0];
         let m = contraction(&mut input, &mut mc);
@@ -37,9 +37,7 @@ fn main() {
         if m[0] < min {
             min = m[0];
         }
-
     }
     println!("week4: mincuts: {:?}", mincuts);
     println!("week4: min of mincuts: {:?}", min);
-
 }

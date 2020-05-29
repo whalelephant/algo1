@@ -1,9 +1,9 @@
 [package]
 name = "algo1"
+version = "0.1.0"
 authors = ["bwty <whalelephant@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
 uint = "0.8"
-csv = "1.1"
 rand = "0.7.3"
