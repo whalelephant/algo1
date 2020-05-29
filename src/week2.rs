@@ -4,7 +4,7 @@ use std::io::BufReader;
 use std::io::prelude::*;
 use std::path::Path;
 
-pub fn get_input() -> Vec<u32> {
+pub fn inversion_input() -> Vec<u32> {
     let path = Path::new("./week2/input.txt");
     let display = path.display();
     let file = match File::open(&path) {

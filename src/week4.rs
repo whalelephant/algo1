@@ -6,7 +6,7 @@ use csv::ReaderBuilder;
 use std::collections::HashMap;
 use rand::prelude::*;
 
-pub fn get_input() -> HashMap<u32, Vec<u32>> {
+pub fn contraction_input() -> HashMap<u32, Vec<u32>> {
     let path = Path::new("./week4/input.txt");
     let file = match File::open(&path) {
         Err(_) => panic!("couldn't open {}"),

@@ -3,9 +3,9 @@ mod week2;
 mod week3;
 mod week4;
 use week1::karatsuba;
-use week2::{get_input, inversion};
-use week3::{get_input, quicksort};
-use week4::{get_input, contraction};
+use week2::{inversion_input, inversion};
+use week3::{quicksort_input, quicksort};
+use week4::{contraction_input, contraction};
 
 fn main() {
     // week1
@@ -14,11 +14,11 @@ fn main() {
     karatsuba(num1, num2);
 
     // week2
-    let init_vec = get_input();
+    let init_vec = inversion_input();
     let (_, inverted) = inversion(init_vec, 0);
 
     // week3
-    let mut init_vec = get_input();
+    let mut init_vec = quicksort_input();
     let l = 0; //initial position of pivot
     let r = init_vec.len(); // initial end of partition
     let mut c = [0]; // initial comparison
@@ -30,7 +30,7 @@ fn main() {
     let mut mincuts = Vec::new();
     let mut min = 99999;
     for i in 0..500 {
-        let mut input = get_input();
+        let mut input = contraction_input();
         let mut mc = [0];
         let m = contraction(&mut input, &mut mc);
         mincuts.push(m);
